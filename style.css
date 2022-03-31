@@ -1,0 +1,198 @@
+:root {
+    /* Color */
+    --color-white: #ffffff; 
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd; 
+    --color-pink: #fe918d;
+    --color-dark-pink: #ff6863; 
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #616161; 
+    --color-light-grey: #7c7979;
+    --color-blue: #73aace; 
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546; 
+    --color-black: #000000;
+    
+    /* Font size */
+    --font-large: 48px; 
+    --font-medium: 28px; 
+    --font-regular: 18px;
+    --font-small: 16px; 
+    --font-micro: 14px;
+    /* Font weight */
+    --weight-bold: 700; 
+    --weight-semi-bold: 600; 
+    --weight-regular: 400;
+}
+/* Typography */
+h1 { 
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 16px 0px;
+} 
+h2 { 
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-black);
+        margin: 8px 0;
+} 
+h3 { 
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 8px 0;
+} 
+p { 
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 4px 0;
+}
+
+
+/*초기화 설정*/
+*{
+    box-sizing: border-box; /*border사이트 포함*/
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    cursor: default;/*커서를 글자인식 안시킨다.*/
+}
+a{
+    text-decoration: none;/*링크 언더바가 없어진다.*/
+    color: var(--color-white);
+}
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.section{
+    padding: 50px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+button /*#home > button*/{ /*버튼 초기화*/
+    background-color: transparent; /*투명*/
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+
+
+/*최상단 네비게이션 바 설정*/
+#navbar{
+    /*step 1. 자식정렬*/
+    height: 100px;
+    display: flex; /*블록요소를 가로로 배치*/
+    justify-content: space-between; /*양끝가로정렬*/
+    background-color: var(--color-orange); /*백그라운드컬러주기*/
+    align-items: center; /*세로 가운데정렬*/
+    color: var(--color-white);
+    padding: 5px 30px;
+}
+.navbar_logo{
+    font-size: var(--font-large);
+    font-weight: var(--weight-semi-bold);
+}
+.navbar_menu > ul{
+    display: flex;
+}
+.navbar_menu_item{ /*.navbar_menu > ul > li*/
+    padding: 8px 12px;
+    margin: 0 9px;
+    cursor: pointer;
+}
+.navbar_menu_item.active{ /*.navbar_menu > ul > li*/
+    border: 1px solid var(--color-white);
+    border-radius: 4px;
+}
+.navbar_menu_item:hover{ /*.navbar_menu > ul > li*/
+    background-color: var(--color-blue);
+    border-radius: 4px;
+}
+/* 네비게이션 바 끝 */
+
+/* home 시작 */
+#home{
+    min-height: 700px;
+    background-image: url('images/background.jpg');
+    padding: 40px; /*컨텐츠 내용을 아래로 조금 내림*/
+    text-align: center; /*글자 중앙정렬*/
+    height: inherit;
+}
+.home_avatar{/*#home > img*/
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--color-white);
+}
+.home_title,.home_description{
+    color: var(--color-white);
+}
+.home_contact{
+    color: var(--color-white);
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px 0;
+    padding: 8px 12px;
+    border: 2px solid var(--color-white);
+    border-radius: 4px;
+}
+/* home 끝 */
+
+/* serviceoffer 시작 */
+.serviceoffers_skill{ /*serviceoffers(section) > div*/
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.skill_icon{
+    width: 170px;
+    height: 170px;
+    font-size: 70px;
+    line-height: 170px; /*부모상자의 크기와 글자의 크기를 같게하면 글자는 자동으로 세로중앙정렬됨*/
+    margin: auto;
+    color: blue;
+    border: 1px solid var(--color-blue);
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+.skill_icon:hover i{
+    color: var(--color-pink);
+    transform: rotate(-30deg) scale(1.5);
+}
+.skill_icon i{
+    transition: all 300ms ease;
+}
+
+.skill_title,.skill_desc{
+    color: var(--color-dark-grey);
+}
+.skill_desc{
+    font-size: var(--font-small);
+}
+.company{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.company_description{
+    margin: 0 16px;
+    text-align: left;
+}
+.company_name,.company_period{
+    color: var(--color-light-grey);
+}
+.company_name{
+    font-size: var(--font-small);
+}
+.company_period{
+    font-size: var(--font-micro);
+}
+/* serviceoffers 끝 */
