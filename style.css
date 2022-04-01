@@ -87,6 +87,7 @@ button /*#home > button*/{ /*버튼 초기화*/
 /*최상단 네비게이션 바 설정*/
 #navbar{
     /*step 1. 자식정렬*/
+    width: 100%;
     height: 100px;
     display: flex; /*블록요소를 가로로 배치*/
     justify-content: space-between; /*양끝가로정렬*/
