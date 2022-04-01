@@ -197,3 +197,149 @@ button /*#home > button*/{ /*버튼 초기화*/
     font-size: var(--font-micro);
 }
 /* serviceoffers 끝 */
+
+/* skill 시작 */
+#skills{
+    background-color: var(--color-yellow)
+}
+.skillset{
+    display: flex;
+    background-color: var(--color-light-grey);
+    color: var(--color-light-white);
+    margin: 20px 0;
+}
+.skillset_left{
+    flex-basis: 60%;
+    background-color: var(--color-dark-grey);
+    padding: 20px 40px;
+}
+
+.skillset_right{
+    flex-basis: 40%;
+}
+
+.skillset_title{
+    color: var(--color-white);
+}
+.skillset_desc{
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-light-white);
+}
+.skill_bar{
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey);
+}
+.skill{
+    margin: 8px;
+}
+.skill_value_1{
+    height: 3px;
+    background-color: var(--color-orange);
+}
+.skill_value_2{
+    width: 50%;
+    height: 3px;
+    background-color: var(--color-orange);
+    
+}
+.skill_value_3{
+    width: 87%;
+    height: 3px;
+    background-color: var(--color-orange);
+}
+.tools, .etc{
+    padding:20px;
+}
+.tools{
+    background-color: var(--color-grey);
+}
+.skillset_title{
+    font-weight: var(--weight-bold);
+    font-size: var(--font-medium);
+}
+.skillset_right > div > ul > li{
+    margin: 10px 0;
+}
+/* skill 끝 */
+.category_btn{
+    border: 1px solid var(--color-dark-white);
+    border-radius: 4px;
+    font-size: var(--font-regular);
+    padding: 8px 48px;
+}
+.work_categories{
+    margin: 40px;
+}
+.category_btn.active, .category_btn:hover{
+    background-color: #fe918d;
+    color: var(--color-white);
+}
+.category_count{ /*문자*/
+    background-color: orange;
+    border-radius: 50%;
+    display: inline-block; /*inline인데 block처럼 적용되서 높이 조절 가능*/
+    color: white;
+    height: 24px; /*inline상태에서는 height width 적용 안됨*/
+    width: 24px;
+    line-height: 24px;/*글자 세로 중앙정렬*/
+    position: relative;
+    top: -20px;
+    left: 4px;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+.category_btn.active .category_count, .category_btn:hover .category_count{
+    opacity: 1;
+    top: 0;
+}
+.work_projects{
+    display: flex;
+    flex-wrap: wrap; /*넘치면 다음줄로 배치*/
+    justify-content: center;
+}
+.project{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 2px;
+    background-color: var(--color-light-white);
+}
+.project_img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.project_desc{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 300ms ease;
+}
+.project:hover .project_desc{
+    opacity: 0.8;
+    transform: translateY(0px);
+}
+.project_desc h3{
+    color: var(--color-white);
+}
+.project_desc h3:after{
+    content: '';
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-dark-white);
+    display: block;
+    position: relative;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: 8px;
+}
